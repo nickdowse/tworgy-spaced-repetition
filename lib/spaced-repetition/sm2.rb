@@ -45,6 +45,7 @@ module SuperMemo
       
       self.next_repetition = Date.today + repetition_interval
       self.last_studied = Date.today
+      self.quality_of_last_recall = quality_of_recall
     end
 
     def scheduled_to_recall?
