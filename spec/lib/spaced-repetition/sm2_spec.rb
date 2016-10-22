@@ -15,17 +15,6 @@ describe SuperMemo::SM2 do
       t.check_spaced_repetition_methods
     end
 
-    it 'should raise DBC exception if class including is missing fields' do
-      class Temp2 
-        include SuperMemo::SM2
-      end
-      t = Temp2.new
-
-      lambda {
-        t.check_spaced_repetition_methods
-      }.should raise_error(DBC::AssertconditionException)
-    end
-
   end
   
   describe 'exclude mixin' do
@@ -40,14 +29,10 @@ describe SuperMemo::SM2 do
         :last_studied => nil,
         :question => "Who is the most awesome of them all?",
         :answer => 'Me!'
-      }.ostructify
+      }
 
       @card.extend SuperMemo::SM2
       @card.reset_spaced_repetition_data
-    end
-    
-    it 'should raise DBC exception if class extended is missing fields' do
-      lambda { nil.extend SuperMemo::SM2 }.should raise_error(DBC::AssertconditionException)
     end
     
     it 'should initialize values' do

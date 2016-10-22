@@ -2,12 +2,12 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
 require 'rubygems'
-require 'tworgy-ruby'
+# require 'tworgy-ruby'
 require 'tworgy-spaced-repetition'
 require 'tworgy-spaced-repetition-testing'
-require 'spec'
-require 'spec/autorun'
+# require 'spec'
+# require 'spec/autorun'
 
-Spec::Runner.configure do |config|
+# Spec::Runner.configure do |config|
   
-end
+# end

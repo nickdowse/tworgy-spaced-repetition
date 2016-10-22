@@ -20,10 +20,6 @@ module SuperMemo
     end
 
     def process_recall_result(quality_of_recall)
-      DBC.require(quality_of_recall >= 0)
-      DBC.require(quality_of_recall <= 5)
-      DBC.require(easiness_factor)
-      DBC.require(number_repetitions)
       
       if quality_of_recall < 3    
         self.number_repetitions = 0 
